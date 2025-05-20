@@ -1,0 +1,26 @@
+{
+	"in_directory":"src",
+	"out_directory":"",
+	"extensions":[".html"],
+	"css_file":"public/stylezero/stylezero.css",
+	"css_directory":"public/stylezero",
+	"js_directory":"public/stylezero",
+	"css_include":"<link rel=\"stylesheet\" href=\"public/stylezero/STYLEZERO_ID.css\">",
+	"js_include":"<script src=\"public/stylezero/STYLEZERO_ID.js\"></script>",
+	"signal_file":"public/stylezero/signal",
+	"replacements":{
+		"<stylezero:id>":"STYLEZERO_ID",
+		"<stylezero:time>":"STYLEZERO_TIME",
+		"<stylezero:css>":"STYLEZERO_CSS_INCLUDE",
+		"<stylezero:js>":"STYLEZERO_JS_INCLUDE"
+	},
+	"breakpoints":{
+		"@small-only":"0-640",
+		"@medium-only":"641-1024",
+		"@medium":"641",
+		"@large":"1025"
+	},
+	"attributes":{
+		"([a-z][a-z\\-]+[a-z]:(?:.+\\s)?)([a-z]+)([\\s,\\)].*|$)":[[null,null,{"@import":"css-named-values.json"}],"\\1\\2\\3"]
+	}
+}
